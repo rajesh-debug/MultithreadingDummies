@@ -1,6 +1,7 @@
 package com.core.threading;
 
 public class PrintEvenOdd {
+
     private int count = 1;
     private boolean odd = true;
     private int MAX = 10;
@@ -43,7 +44,7 @@ public class PrintEvenOdd {
     }
 
     public static void main(String[] args) {
-        PrintEvenOdd printEvenOdd = new PrintEvenOdd(2000);
+        PrintEvenOdd printEvenOdd = new PrintEvenOdd(10);
         Thread even = new Thread() {
             @Override
             public void run() {
@@ -57,6 +58,7 @@ public class PrintEvenOdd {
                 printEvenOdd.printOdd();
             }
         };
+
         even.start();
         odd.start();
     }
